@@ -8,7 +8,6 @@ const About = () => {
     { name: 'Frontend Development', level: 95, icon: FaCode },
     { name: 'Backend Development', level: 90, icon: FaServer },
     { name: 'Database Design', level: 85, icon: FaDatabase },
-    { name: 'Mobile Development', level: 80, icon: FaMobile },
   ]
 
   const technologies = [
@@ -100,7 +99,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center space-x-4">
                   <span className="text-neon-blue font-medium min-w-[100px]">Education:</span>
-                  <span className="text-gray-300">B.Tech AI & DS (3rd Year)</span>
+                  <span className="text-gray-300">B.Tech AI & DS (4th Year)</span>
                 </div>
               </div>
             </div>
