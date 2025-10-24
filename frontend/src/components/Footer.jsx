@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaTwitter, FaHeart, FaCode } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -141,18 +141,6 @@ const Footer = () => {
             <p className="text-gray-400 text-sm">
               © {currentYear} Surya Yeturu. All rights reserved.
             </p>
-            <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <span>Made with</span>
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity }}
-              >
-                <FaHeart className="w-4 h-4 text-red-500" />
-              </motion.div>
-              <span>and</span>
-              <FaCode className="w-4 h-4 text-neon-blue" />
-              <span>by Surya Yeturu</span>
-            </div>
           </div>
         </motion.div>
       </div>
