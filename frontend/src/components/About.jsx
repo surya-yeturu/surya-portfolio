@@ -184,7 +184,7 @@ const About = () => {
               <div className="border-l-4 border-neon-blue pl-4">
                 <h4 className="text-lg font-semibold text-white">B.Tech Artificial Intelligence & Data Science</h4>
                 <p className="text-neon-blue font-medium">2024 - Present</p>
-                <p className="text-gray-300">NBKRIST, Vidyanagar - 3rd Year</p>
+                <p className="text-gray-300">NBKRIST, Vidyanagar - 4th Year</p>
               </div>
               <div className="border-l-4 border-neon-purple pl-4">
                 <h4 className="text-lg font-semibold text-white">Intermediate</h4>
