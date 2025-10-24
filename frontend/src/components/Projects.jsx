@@ -22,7 +22,7 @@ const Projects = () => {
       description: "Modern full-stack banking demo with Node.js/Express, MongoDB, and a React + Vite + Tailwind UI. Features user authentication, balance transfers, mini statements (PDF/CSV), student account applications, and spending analytics with charts.",
       techStack: ["Node.js", "Express.js", "MongoDB", "React", "Vite", "Tailwind CSS", "JWT", "bcrypt", "pdfkit"],
       githubUrl: "https://github.com/surya-yeturu/finbank",
-      liveUrl: null,
+      liveUrl: "https://finbankss.netlify.app/",
       category: "Full Stack",
       featured: true,
       icon: FaServer
@@ -33,7 +33,7 @@ const Projects = () => {
       description: "Real-time weather application that provides current weather conditions, forecasts, and location-based weather information with a clean and intuitive user interface.",
       techStack: ["JavaScript", "HTML5", "CSS3", "Weather API", "Fetch API"],
       githubUrl: "https://github.com/surya-yeturu/Wheather-app",
-      liveUrl: null,
+      liveUrl: "https://surya-yeturu.github.io/Wheather-app/",
       category: "Frontend",
       featured: false,
       icon: FaMobile
@@ -44,7 +44,7 @@ const Projects = () => {
       description: "Personal finance management application that helps users track their expenses, categorize spending, and visualize their financial data with interactive charts and reports.",
       techStack: ["JavaScript", "HTML5", "CSS3", "Local Storage", "Chart.js"],
       githubUrl: "https://github.com/surya-yeturu/Expense_tracker",
-      liveUrl: null,
+      liveUrl: "https://surya-yeturu.github.io/Expense_tracker/",
       category: "Frontend",
       featured: false,
       icon: FaMobile
