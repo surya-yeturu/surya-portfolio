@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaCode, FaServer, FaDatabase, FaMobile, FaDownload } from 'react-icons/fa'
-import { API_CONFIG, ENDPOINTS } from '../config/api'
 
 const About = () => {
   const skills = [
@@ -15,21 +14,15 @@ const About = () => {
     'Python', 'FastAPI', 'PostgreSQL', 'Tailwind CSS', 'Git', 'Docker'
   ]
 
-  const handleDownloadResume = async () => {
-    try {
-      const response = await fetch(`${API_CONFIG.BASE_URL}${ENDPOINTS.RESUME}`)
-      const blob = await response.blob()
-      const url = window.URL.createObjectURL(blob)
-      const link = document.createElement('a')
-      link.href = url
-      link.download = 'Surya_Yeturu_Resume.pdf'
-      document.body.appendChild(link)
-      link.click()
-      document.body.removeChild(link)
-      window.URL.revokeObjectURL(url)
-    } catch (error) {
-      console.error('Error downloading resume:', error)
-    }
+  const handleDownloadResume = () => {
+    const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`
+    const link = document.createElement('a')
+    link.href = resumeUrl
+    link.download = 'Surya_Yeturu_Resume.pdf'
+    link.target = '_blank'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   return (
