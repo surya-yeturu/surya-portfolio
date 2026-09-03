@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaTwitter, FaDownload, FaBars, FaTimes } from 'react-icons/fa'
-import axios from 'axios'
-import { API_CONFIG, ENDPOINTS } from '../config/api'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -16,24 +14,15 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleDownloadResume = async () => {
-    try {
-      const response = await axios.get(`${API_CONFIG.BASE_URL}${ENDPOINTS.RESUME}`, {
-        responseType: 'blob'
-      })
-      
-      const blob = new Blob([response.data], { type: 'application/pdf' })
-      const url = window.URL.createObjectURL(blob)
-      const link = document.createElement('a')
-      link.href = url
-      link.download = 'Surya_Yeturu_Resume.pdf'
-      document.body.appendChild(link)
-      link.click()
-      document.body.removeChild(link)
-      window.URL.revokeObjectURL(url)
-    } catch (error) {
-      console.error('Error downloading resume:', error)
-    }
+  const handleDownloadResume = () => {
+    const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`
+    const link = document.createElement('a')
+    link.href = resumeUrl
+    link.download = 'Surya_Yeturu_Resume.pdf'
+    link.target = '_blank'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   const scrollToSection = (sectionId) => {
